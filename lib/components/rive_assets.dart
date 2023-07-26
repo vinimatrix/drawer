@@ -1,23 +1,36 @@
-import 'package:rive/rive.dart';
+import 'package:drawer/entry_point.dart';
+import 'package:drawer/entry_point2.dart';
+import 'package:flutter/material.dart';
 
-class RiveAsset{
-  final String src;
-  final String stateMachineName;
-  final String artboard;
-  late  SMIBool? input;
+///LISTADO DE CONFIGURACION
+class RiveAsset {
+  late bool? input;
   final String title;
+  final IconData icon;
+  final String subtitle;
+  final Widget navClass;
 
-RiveAsset(this.src,{
-  required this.artboard,
-  required this.stateMachineName,
-  required this.title,
-  this.input
-});
+  RiveAsset(
+    this.navClass, {
+    required this.title,
+    required this.icon,
+    this.input,
+    required this.subtitle,
+  });
 
-set setInput(SMIBool status){
-  input =status;
+  set setInput(bool status) {
+    input = status;
+  }
 }
-}
-List<RiveAsset> sideMenus =[
-  RiveAsset("assets/icons.riv", artboard: "HOME", stateMachineName: "HOME_Interactivity", title:"Home")
-]
+
+////ESTE ES EL LISTADO DE CONSTANTES PARA EL MENU
+///LA PRIMERA VARIABLE ES DONDE VAN A NAVEGAR
+List<RiveAsset> sideMenus = [
+  ////ITEM MENU PARA EL DASHBOARD
+  RiveAsset(const EntryPoint(),
+      title: "Home", icon: Icons.dashboard, subtitle: "El Dashboard"),
+
+  ///ITEM MENU PARA LAS ACTAS
+  RiveAsset(const EntryPoint2(),
+      title: "Actas", icon: Icons.file_copy, subtitle: "Las Actas")
+];
