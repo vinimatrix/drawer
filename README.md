@@ -1,16 +1,18 @@
 # drawer
+Menu con efecto 3d.
 
-A new Flutter project.
+## Configuraciones
 
-## Getting Started
+en la carpeta components hay un archivo llamado configuracion.dart
+aqui definiremos la configuracion de colores del componente
 
-This project is a starting point for a Flutter application.
+## Listado de items de menu
+para definir los items del menu debemos configurarlos en el archivo rive_assets.dart
+en la variable sideMenus, este listado contiene las definiciones para los items del menu
+- title titulo del menu
+- subtitle subtitulo del menu
+- navClass es el widget a donde se navegara al hacer tap.
+- icon icono del menu
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Wrappers
+las paginas deben estar dentro del componente entry_point.(ver linea 74)
