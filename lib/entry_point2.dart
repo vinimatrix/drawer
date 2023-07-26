@@ -75,7 +75,8 @@ class _EntryPoint2State extends State<EntryPoint2>
             curve: Curves.fastOutSlowIn,
             left: isMenuOpen ? 220 : 0,
             child: MenuBtn(
-              icon: isMenuOpen ? Icons.close : Icons.menu,
+              icon:
+                  isMenuOpen ? Configuracion.iconClose : Configuracion.iconOpen,
               press: () {
                 if (isMenuOpen) {
                   animationController.reverse();

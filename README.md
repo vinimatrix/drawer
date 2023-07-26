@@ -13,6 +13,7 @@ en la variable **sideMenus**, este listado contiene las definiciones para los it
 - **subtitle:** subtitulo del menu
 - **navClass:** es el widget a donde se navegara al hacer tap.
 - **icon:** icono del menu
+- **input** variable booleana define si esta activo o inactivo el menu.
 
 ## Wrappers
 las paginas deben estar dentro del componente **entry_poin.dart**.(ver linea 74)

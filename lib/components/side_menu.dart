@@ -1,6 +1,7 @@
 import 'package:drawer/components/configuracion.dart';
 import 'package:drawer/components/info_card.dart';
 import 'package:drawer/components/rive_assets.dart';
+import 'package:drawer/components/route_builder.dart';
 import 'package:drawer/components/side_menu_tile.dart';
 import 'package:flutter/material.dart';
 
@@ -53,8 +54,8 @@ class _SideMenuState extends State<SideMenu> {
                           e.input = false;
                           selected = e;
                         });
-                        Navigator.of(context).pushReplacement(MaterialPageRoute(
-                            builder: (context) => e.navClass));
+                        Navigator.of(context).pushReplacement(
+                            RouteBuilder.createRoute(e.navClass));
                       });
                     },
                     isActive: selected == e,
